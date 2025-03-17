@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout History</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Workout History</h2>
+
+        <h3>G's Workouts</h3>
+        {% if g_workouts %}
+            <ul>
+                {% for date, workout in g_workouts.items() %}
+                    <li><strong>{{ date }}:</strong> {{ workout }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No workouts logged yet for G.</p>
+        {% endif %}
+
+        <h3>A's Workouts</h3>
+        {% if a_workouts %}
+            <ul>
+                {% for date, workout in a_workouts.items() %}
+                    <li><strong>{{ date }}:</strong> {{ workout }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No workouts logged yet for A.</p>
+        {% endif %}
+
+        <a href="{{ url_for('home') }}" class="button">Back to Home</a>
+    </div>
+</body>
+</html>

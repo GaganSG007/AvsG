@@ -1,0 +1,151 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    margin: 0;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Center Content */
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    background: white;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Input Styling */
+input {
+    width: 100%;
+    padding: 14px;
+    margin: 12px 0;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 18px;
+    text-align: center;
+    outline: none;
+    transition: border 0.3s ease-in-out;
+}
+
+input:focus {
+    border-color: #007bff;
+}
+
+/* Custom Buttons */
+button {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #007bff, #00aaff);
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #0056b3, #008cff);
+    transform: scale(1.05);
+}
+
+/* ---- OTP Input Styling ---- */
+.otp-input {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.otp-input input {
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid #bbb;
+    transition: all 0.3s ease-in-out;
+}
+
+.otp-input input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+}
+
+/* ---- G's Minimalistic Theme ---- */
+.minimal-theme {
+    background-color: #ffffff;
+    color: #222;
+}
+
+.minimal-theme .container {
+    background: white;
+    border: 2px solid #ddd;
+}
+
+.minimal-theme button {
+    background: linear-gradient(135deg, #222, #555);
+}
+
+.minimal-theme button:hover {
+    background: linear-gradient(135deg, #000, #444);
+}
+
+/* ---- A's Pink Girly Theme ---- */
+.pink-theme {
+    background-color: #ffe6f2;
+    color: #d63384;
+}
+
+.pink-theme .container {
+    background: #ffebf5;
+    border: 2px solid #ffb6c1;
+}
+
+.pink-theme button {
+    background: linear-gradient(135deg, #ff69b4, #ff1493);
+}
+
+.pink-theme button:hover {
+    background: linear-gradient(135deg, #ff1493, #ff007f);
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+        max-width: 320px;
+    }
+    
+    input {
+        font-size: 16px;
+        padding: 12px;
+    }
+    
+    button {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .otp-input input {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+}

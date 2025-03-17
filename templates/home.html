@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body class="{% if user == 'A' %}pink-theme{% else %}minimal-theme{% endif %}">
+
+    <div class="container">
+        <h2>Welcome, {{ user }}!</h2>
+        
+        {% if message %}
+            <p class="motivational-message">{{ message }}</p>
+        {% endif %}
+
+        <form method="POST">
+            <textarea name="workout" placeholder="Enter today's workout..." required></textarea>
+            <button type="submit">Submit Workout</button>
+        </form>
+
+        <p><strong>Today's Workout:</strong> {{ today_workout }}</p>
+
+        <div class="buttons">
+            <a href="{{ url_for('history') }}" class="button">View History</a>
+            <a href="{{ url_for('logout') }}" class="button logout">Logout</a>
+        </div>
+    </div>
+
+</body>
+</html>
