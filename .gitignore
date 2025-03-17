@@ -2,3 +2,4 @@ echo "__pycache__/" >> .gitignore
 echo "venv/" >> .gitignore
 echo "data.json" >> .gitignore
 echo ".env" >> .gitignore
+.vercel
